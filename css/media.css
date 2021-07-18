@@ -1,0 +1,163 @@
+@media (min-width: 1200px) {
+
+  header {
+    padding-top: 66px;
+    padding-left: 120px;
+  }
+
+  main {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  footer {
+    padding: 10px 120px;
+  }
+
+  .logo img{
+    width: 180px;
+  }
+
+  .main-info {
+    /* max-width: 530px; */
+    margin-left: 120px;
+    text-align: left;
+  }
+
+  .main-info__row {
+    margin-top: 24px;
+  }
+
+  .header-text {
+    font-size: 24px;
+  }
+  
+  .header-text--main {
+    font-size: 92px;
+  }
+  
+  .header-text--big {
+    font-size: 54px;
+  }
+  
+  .header-text--middle {
+    font-size: 38px;
+  }
+
+  .header-text--modal {
+    margin-top: 20px;
+  }
+  
+  .text {
+    font-size: 18.8px;
+  }
+  
+  .text--big {
+    font-size: 22.4px;
+  }
+
+  .btn--main {
+    margin-top: 30px;
+    padding: 22px 37px;
+    font-size: 35px;
+    border-radius: 10px;
+  }
+
+  .btn--download {
+    margin-right: 30px;
+  }
+  .btn--download img {
+    width: 148px;
+  }
+
+  .img-main {
+    margin: 0;
+    margin-right: 120px;
+    transform: translateY(-30px);
+  }
+
+  .footer__container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer__terms {
+    order: inherit;
+    grid-column-start: span 1;
+    margin-bottom: 0;
+  }
+
+  .club-logos img {
+    margin-left: 25px;
+    height: 50px;
+  }
+
+  .popup__container {
+    width: 600px;
+    height: 600px;
+    padding: 15px 75px 30px 45px;
+  }
+
+  .popup__close {
+    top: 35px;
+    right: 30px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .popup__close:after,
+  .popup__close:before{
+    width: 3px;
+    height: 26px;
+  }
+
+  .popup .text {
+    margin-top: 22px;
+  }
+  
+  .popup section {
+    padding-bottom: 20px;
+  }
+
+  .popup__ul li {
+    margin-left: 20px;
+  }
+  
+  .popup__ul li::before{
+    top: 5px;
+    left: -20px;
+    width: 7px;
+    height: 7px;
+  }
+
+}
+
+@media (min-width: 1800px) {
+
+  .main-info__row {
+    margin-top: 30px;
+  }
+
+  .header-text {
+    font-size: 30px;
+  }
+  
+  .header-text--main {
+    font-size: 115px;
+  }
+  
+  .header-text--big {
+    font-size: 67px;
+  }
+  
+  .header-text--middle {
+    font-size: 47px;
+  }
+  
+  .text {
+    font-size: 23px;
+  }
+  
+  .text--big {
+    font-size: 27px;
+  }
+}

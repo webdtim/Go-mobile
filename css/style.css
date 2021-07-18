@@ -1,0 +1,473 @@
+/*Обнуляем стили*/
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1.2;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{
+  list-style: none;
+  list-style-type: none;
+}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@font-face {
+  font-family: "Druk Wide";
+  font-weight: 800;
+  src: url("../fonts/Druk.otf") format("opentype");
+}
+/* ---------------- */
+
+* {
+  font-family: 'Roboto', verdana;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+body {
+  background: url(../img/background.png) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  max-width: 100%;
+  padding-top: 20px;
+  padding-left: 21px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 21px;
+  background-color: #0E0E0E;
+}
+
+.logo img{
+  width: 66px;
+}
+
+.main-info {
+  text-align: center;
+}
+
+.main-info__row {
+  display: flex;
+  flex-direction: column;
+  margin-top: 14px;
+}
+
+.header-text {
+  font-family: "Druk Wide";
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.header-text--main {
+  font-size: 56px;
+  color: #FFCC00;
+}
+
+.header-text--big {
+  font-size: 31.2px;
+}
+
+.header-text--middle {
+  font-size: 22.2px;
+}
+
+.header-text--modal {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  text-align: center;
+  line-height: 1;
+}
+
+.text {
+  font-size: 10.5px;
+  line-height: 1.3;
+  color: #ffffff;
+}
+
+.text--big {
+  font-size: 12.5px;
+}
+
+.btn {
+  color: #000000;
+}
+
+.btn--main {
+  margin-top: 20px;
+  padding: 10px 24px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #FFCC00;
+}
+
+.footer__download-container {
+  display: flex;
+}
+
+.btn--download {
+  margin-right: 8px;
+}
+.btn--download img {
+  width: 67px;
+}
+
+.img-main {
+  margin: 25px 15px 0;
+}
+
+.img-main img {
+  max-width: 100%;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: center;
+}
+
+.footer__terms {
+  order: -1;
+  grid-column-start: span 2;
+  grid-column-end: auto;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.club-logos img {
+  margin-left: 10px;
+  height: 21px;
+  float: right;
+}
+
+.modal {
+  display: none;
+}
+
+.modal--open {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__background {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+  display: none;
+}
+
+.popup--open {
+  display: block;
+  position: relative;
+  z-index: 20;
+}
+
+.popup__container {
+  width: 300px;
+  height: 500px;
+  padding: 15px 43px 30px 15px;
+  background-color: #171717;
+}
+
+.popup__close {
+  position: absolute;
+  top: 12px;
+  right: 17px;
+  z-index: 21;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+.popup__close:after,
+.popup__close:before{
+  content: ' ';
+  position: absolute;
+  left: 10px;
+  width: 2px;
+  height: 14px;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+.popup__close:before {
+  transform: rotate(45deg);
+}
+.popup__close:after {
+  transform: rotate(-45deg);
+}
+
+
+.popup .text {
+  margin-top: 12px;
+}
+
+.popup section {
+  padding-bottom: 10px;
+}
+
+.popup__text-wrap {
+  position: relative;
+  margin-right: 18px;
+}
+
+.popup__ul li {
+  position: relative;
+  margin-left: 10px;
+}
+
+.popup__ul li::before{
+  position: absolute;
+  top: 3px;
+  left: -10px;
+  content: " ";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #FFCC00;
+}
+
+
+
+
+@media (min-width: 1200px) {
+
+  header {
+    padding-top: 66px;
+    padding-left: 120px;
+  }
+
+  main {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  footer {
+    padding: 10px 120px;
+  }
+
+  .logo img{
+    width: 180px;
+  }
+
+  .main-info {
+    /* max-width: 530px; */
+    margin-left: 120px;
+    text-align: left;
+  }
+
+  .main-info__row {
+    margin-top: 24px;
+  }
+
+  .header-text {
+    font-size: 24px;
+  }
+  
+  .header-text--main {
+    font-size: 92px;
+  }
+  
+  .header-text--big {
+    font-size: 54px;
+  }
+  
+  .header-text--middle {
+    font-size: 38px;
+  }
+
+  .header-text--modal {
+    margin-top: 20px;
+  }
+  
+  .text {
+    font-size: 18.8px;
+  }
+  
+  .text--big {
+    font-size: 22.4px;
+  }
+
+  .btn--main {
+    margin-top: 30px;
+    padding: 22px 37px;
+    font-size: 35px;
+    border-radius: 10px;
+  }
+
+  .btn--download {
+    margin-right: 30px;
+  }
+  .btn--download img {
+    width: 148px;
+  }
+
+  .img-main {
+    margin: 0 120px 0 20px;
+    transform: translateY(-30px);
+  }
+
+  .footer__container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer__terms {
+    order: inherit;
+    grid-column-start: span 1;
+    margin-bottom: 0;
+  }
+
+  .club-logos img {
+    margin-left: 25px;
+    height: 50px;
+  }
+
+  .popup__container {
+    width: 600px;
+    height: 600px;
+    padding: 15px 75px 30px 45px;
+  }
+
+  .popup__close {
+    top: 35px;
+    right: 30px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .popup__close:after,
+  .popup__close:before{
+    width: 3px;
+    height: 26px;
+  }
+
+  .popup .text {
+    margin-top: 22px;
+  }
+  
+  .popup section {
+    padding-bottom: 20px;
+  }
+
+  .popup__ul li {
+    margin-left: 20px;
+  }
+  
+  .popup__ul li::before{
+    top: 5px;
+    left: -20px;
+    width: 7px;
+    height: 7px;
+  }
+}
+
+
+
+
+@media (min-width: 1800px) {
+
+  header {
+    padding-left: 300px;
+  }
+
+  main {
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  footer {
+    padding: 10px 300px;
+  }
+
+  .main-info__row {
+    margin-top: 30px;
+  }
+
+  .header-text {
+    font-size: 30px;
+  }
+  
+  .header-text--main {
+    font-size: 115px;
+  }
+  
+  .header-text--big {
+    font-size: 67px;
+  }
+  
+  .header-text--middle {
+    font-size: 47px;
+  }
+  
+  .text {
+    font-size: 23px;
+  }
+  
+  .text--big {
+    font-size: 27px;
+  }
+
+  .img-main {
+    margin: 0 20px 0 20px;
+    transform: translateY(0);
+  }
+}
+
